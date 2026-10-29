@@ -1,0 +1,56 @@
+:root {
+  --cream: #fbf6ea;
+  --card: #ffffff;
+  --green: #3f9b5a;
+  --deep: #24543a;
+  --coral: #e8735f;
+  --text: #2c2a26;
+  --muted: #6b675e;
+  --line: #ece4d2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cream: #1d1f1b;
+    --card: #272a25;
+    --green: #6cc387;
+    --deep: #a9dcb8;
+    --coral: #f09584;
+    --text: #f1eee6;
+    --muted: #b4afa3;
+    --line: #3a3d36;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Segoe UI", sans-serif;
+  line-height: 1.75;
+}
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.logo {
+  width: 48px; height: 48px; border-radius: 16px; background: var(--green);
+  display: grid; place-items: center; color: #fff; font-size: 26px;
+}
+header .name { font-weight: 800; font-size: 1.25rem; color: var(--deep); }
+nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 24px; }
+nav a {
+  padding: 6px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line);
+  color: var(--deep); text-decoration: none; font-weight: 600; font-size: .9rem;
+}
+nav a[aria-current="page"] { background: var(--green); border-color: var(--green); color: #fff; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 24px; margin-bottom: 16px; }
+h1 { font-size: 1.6rem; margin: 0 0 4px; color: var(--deep); }
+h2 { font-size: 1.15rem; margin: 28px 0 8px; color: var(--deep); }
+.card h2:first-child { margin-top: 0; }
+a { color: var(--green); }
+.note { border-left: 4px solid var(--coral); padding: 8px 14px; background: color-mix(in srgb, var(--coral) 10%, transparent); border-radius: 0 12px 12px 0; }
+.meta { color: var(--muted); font-size: .9rem; }
+.button {
+  display: inline-block; padding: 10px 20px; border-radius: 999px; background: var(--green); color: #fff;
+  text-decoration: none; font-weight: 700;
+}
+footer { color: var(--muted); font-size: .85rem; margin-top: 32px; text-align: center; }
+ul { padding-left: 1.3em; }
